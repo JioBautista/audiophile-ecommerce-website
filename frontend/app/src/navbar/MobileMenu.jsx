@@ -41,7 +41,6 @@ function MobileMenu() {
           </div>
         </div>
       </div>
-      <div className="bg-black/50 h-screen"></div>
     </>
   );
 }

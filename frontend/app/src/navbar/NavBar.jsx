@@ -15,7 +15,7 @@ function NavBar() {
   }
   return (
     <>
-      <div className="bg-black">
+      <div className="bg-black relative">
         <div className="container mx-auto p-5 flex items-center justify-between md:px-8">
           <img
             src="src/assets/mobile-menu-icon-white.svg"
@@ -36,8 +36,8 @@ function NavBar() {
             className="w-8 cursor-pointer"
           />
         </div>
+        {isMobileMenuOpen && <MobileMenu />}
       </div>
-      {isMobileMenuOpen && <MobileMenu />}
     </>
   );
 }
