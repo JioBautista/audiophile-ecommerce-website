@@ -1,25 +1,21 @@
 import React from "react";
+import MobileMenu from "./MobileMenu";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isMobileMenuOpen, setIsOpen] = React.useState(false);
 
   const linkStyles = {
     className:
       "text-white mx-5 hover:text-orange-700 font-medium tracking-widest",
   };
 
-  const cardStyles = {
-    className: "bg-gray-200 p-2 max-w-96 w-full",
-  };
-
   function openMobileMenu() {
-    setIsOpen(!isOpen);
+    setIsOpen(!isMobileMenuOpen);
   }
-  console.log(isOpen);
   return (
     <>
-      <div className="bg-black relative">
+      <div className="bg-black">
         <div className="container mx-auto p-5 flex items-center justify-between md:px-8">
           <img
             src="src/assets/mobile-menu-icon-white.svg"
@@ -40,30 +36,8 @@ function NavBar() {
             className="w-8 cursor-pointer"
           />
         </div>
-        {isOpen && (
-          <>
-            <div className="absolute right-0 left-0 ">
-              <div className="flex flex-col md:flex-row py-10 px-5 lg:px-10 justify-center items-center gap-2">
-                <div {...cardStyles}>
-                  <img src="src/assets/shared/mobile/image-xx99-mark-one-headphones.jpg" />
-                  <h2>HEADPHONES</h2>
-                  <Link>SHOP</Link>
-                </div>
-
-                <div {...cardStyles}>
-                  <h2>SPEAKERS</h2>
-                  <Link>SHOP</Link>
-                </div>
-
-                <div {...cardStyles}>
-                  <h2>EARPHONES</h2>
-                  <Link>SHOP</Link>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
       </div>
+      {isMobileMenuOpen && <MobileMenu />}
     </>
   );
 }
