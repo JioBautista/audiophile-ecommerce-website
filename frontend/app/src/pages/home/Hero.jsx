@@ -1,9 +1,13 @@
 import React from "react";
+import Container from "../../components/Container";
+import Button from "../../components/Button";
 
 function Hero() {
   return (
     <div className="bg-hero-pattern-mbl md:bg-hero-pattern-tblt lg:bg-hero-pattern-dsktp  bg-no-repeat bg-cover bg-center h-[730px]">
-      <div className="container mx-auto text-center flex flex-col items-center justify-center h-full lg:items-start lg:text-start">
+      <Container
+        styles={`text-center flex flex-col items-center justify-center h-full lg:items-start lg:text-start px-5`}
+      >
         <span className="text-gray-400 tracking-widest">
           N E W P R O D U C T
         </span>
@@ -14,10 +18,8 @@ function Hero() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button className="text-white px-8 py-3 bg-orange-500 cursor-pointer">
-          SEE PRODUCT
-        </button>
-      </div>
+        <Button styles={"text-white bg-orange-500"}>SEE PRODUCT</Button>
+      </Container>
     </div>
   );
 }

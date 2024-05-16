@@ -1,5 +1,6 @@
 import React from "react";
-import MobileMenu from "./MobileMenu";
+import Category from "./Category";
+import Container from "../components/Container";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -15,8 +16,8 @@ function NavBar() {
   }
   return (
     <>
-      <div className="bg-black relative">
-        <div className="container mx-auto p-5 flex items-center justify-between md:px-8">
+      <div className="bg-black">
+        <Container styles={"p-5 flex items-center justify-between md:px-8"}>
           <img
             src="src/assets/mobile-menu-icon-white.svg"
             className="w-8 lg:hidden cursor-pointer"
@@ -35,8 +36,14 @@ function NavBar() {
             src="src/assets/cart-icon-white.png"
             className="w-8 cursor-pointer"
           />
-        </div>
-        {isMobileMenuOpen && <MobileMenu />}
+        </Container>
+        {isMobileMenuOpen && (
+          <>
+            <div className="absolute right-0 left-0 bg-white">
+              <Category />
+            </div>
+          </>
+        )}
       </div>
     </>
   );
