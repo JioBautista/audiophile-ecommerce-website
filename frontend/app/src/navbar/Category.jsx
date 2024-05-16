@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "../components/Container";
 
 function MobileMenu() {
   const cardStyles = {
-    className: "bg-zinc-100 max-w-96 w-full rounded-md p-5 text-center",
+    className: "bg-zinc-100 w-full rounded-md p-5 text-center",
   };
 
   const textStyles = {
@@ -20,8 +21,8 @@ function MobileMenu() {
 
   return (
     <>
-      <div className="absolute right-0 left-0 bg-white">
-        <div className="flex flex-col md:flex-row  p-10 justify-center items-center gap-10">
+      <Container>
+        <div className="flex flex-col md:flex-row  py-10 px-5  justify-between items-center gap-10">
           <div {...cardStyles}>
             <img src="src/assets/headphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>HEADPHONES</h2>
@@ -40,7 +41,7 @@ function MobileMenu() {
             <Link {...linkStyles}>SHOP</Link>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 }

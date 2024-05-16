@@ -1,12 +1,14 @@
 import React from "react";
 import Hero from "./Hero";
-import MobileMenu from "../../navbar/MobileMenu";
+import Category from "../../navbar/Category";
+import Content from "./Content";
 
 function Home() {
   return (
     <div>
       <Hero />
-      <MobileMenu />
+      <Category />
+      <Content />
     </div>
   );
 }
