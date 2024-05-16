@@ -17,7 +17,7 @@ function HomeYx1() {
         className="hidden lg:block rounded-xl"
       />
 
-      <div className="bg-gray-200 py-10 px-5 max-w-[540px] w-full flex flex-col items-start justify-center lg:px-14 rounded-xl">
+      <div className="bg-gray-200 py-10 px-5 grow flex flex-col items-start justify-center lg:px-14 rounded-xl">
         <h1 className="text-4xl font-bold tracking-widest my-5 md:text-3xl">
           YX1 EARPHONES
         </h1>
