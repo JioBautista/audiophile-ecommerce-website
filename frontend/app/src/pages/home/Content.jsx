@@ -6,7 +6,7 @@ import HomeYx1 from "./HomeYx1";
 
 function Content() {
   return (
-    <Container styles={"py-10 px-5"}>
+    <Container styles={"py-10 px-5 space-y-14"}>
       <HomeZx9 />
       <HomeZx7 />
       <HomeYx1 />

@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 
 function HomeZx9() {
   return (
-    <div className="bg-orange-500 text-center py-16 bg-zx9-bg-pattern bg-no-repeat bg-center bg-contain  mb-10 lg:flex items-center px-20 lg:text-start rounded-xl">
+    <div className="bg-orange-500 text-center py-16 bg-zx9-bg-pattern bg-no-repeat bg-center bg-contain lg:flex items-center px-20 lg:text-start rounded-xl">
       <img
         src="src/assets/home/mobile/image-speaker-zx9.png"
         className="w-[170px] mx-auto md:hidden"
