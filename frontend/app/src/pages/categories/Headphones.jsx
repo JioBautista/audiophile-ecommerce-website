@@ -1,14 +1,20 @@
 import React from "react";
 import Container from "../../components/Container";
 import Button from "../../components/Button";
-import data from "../../data/data.json";
 import Category from "../../navbar/Category";
+import { useQuery } from "@tanstack/react-query";
+import { fetchHeadphones } from "../../api/fetchHeadphones";
 
 function Headphones() {
+  const { isPending, isError, data } = useQuery({
+    queryKey: ["headphones"],
+    queryFn: fetchHeadphones,
+  });
   console.log(data);
 
-  const headphones = data.filter((obj) => obj.category === "headphones");
-  console.log(headphones);
+  const headphones =
+    data && data.filter((obj) => obj.category === "headphones");
+
   return (
     <>
       <div className="bg-black px-5 py-10 text-center text-3xl font-semibold tracking-widest text-white">
@@ -21,7 +27,7 @@ function Headphones() {
       >
         {headphones &&
           headphones.map((items, index) => (
-            <>
+            <React.Fragment key={items.id}>
               <div
                 className={`space-y-10 px-5 ${index === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} lg:flex`}
               >
@@ -65,7 +71,7 @@ function Headphones() {
                   </Button>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           ))}
       </Container>
       <Category />
