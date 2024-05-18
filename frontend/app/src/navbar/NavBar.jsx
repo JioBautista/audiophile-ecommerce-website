@@ -19,27 +19,31 @@ function NavBar() {
       <div className="bg-black">
         <Container styles={"p-5 flex items-center justify-between md:px-8"}>
           <img
-            src="src/assets/mobile-menu-icon-white.svg"
-            className="w-8 lg:hidden cursor-pointer"
+            src="/src/assets/mobile-menu-icon-white.svg"
+            className="w-8 cursor-pointer lg:hidden"
             onClick={openMobileMenu}
           />
-          <h1 className="text-white font-bold text-3xl md:grow md:ml-8 lg:ml-0">
+          <h1 className="text-3xl font-bold text-white md:ml-8 md:grow lg:ml-0">
             audiophile
           </h1>
           <div className="hidden lg:block lg:grow">
-            <Link {...linkStyles}>HOME</Link>
-            <Link {...linkStyles}>HEADPHONES</Link>
+            <Link {...linkStyles} to="/">
+              HOME
+            </Link>
+            <Link {...linkStyles} to="/category/headphones">
+              HEADPHONES
+            </Link>
             <Link {...linkStyles}>SPEAKERS</Link>
             <Link {...linkStyles}>EARPHONES</Link>
           </div>
           <img
-            src="src/assets/cart-icon-white.png"
+            src="/src/assets/cart-icon-white.png"
             className="w-8 cursor-pointer"
           />
         </Container>
         {isMobileMenuOpen && (
           <>
-            <div className="absolute right-0 left-0 bg-white">
+            <div className="absolute left-0 right-0 bg-white">
               <Category />
             </div>
           </>

@@ -22,21 +22,21 @@ function MobileMenu() {
   return (
     <>
       <Container>
-        <div className="flex flex-col md:flex-row  py-10 px-5  justify-between items-center gap-10">
+        <div className="flex flex-col items-center  justify-between gap-10  px-5 py-10 md:flex-row">
           <div {...cardStyles}>
-            <img src="src/assets/headphones-mobile-img.png" {...imgStyles} />
+            <img src="/src/assets/headphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>HEADPHONES</h2>
             <Link {...linkStyles}>SHOP</Link>
           </div>
 
           <div {...cardStyles}>
-            <img src="src/assets/speakers-mobile-img.png" {...imgStyles} />
+            <img src="/src/assets/speakers-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>SPEAKERS</h2>
             <Link {...linkStyles}>SHOP</Link>
           </div>
 
           <div {...cardStyles}>
-            <img src="src/assets/earphones-mobile-img.png" {...imgStyles} />
+            <img src="/src/assets/earphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>EARPHONES</h2>
             <Link {...linkStyles}>SHOP</Link>
           </div>

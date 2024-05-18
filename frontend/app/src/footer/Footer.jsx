@@ -36,15 +36,15 @@ function Footer() {
 
         <div className="space-x-5 md:col-start-2 md:row-start-4 md:self-end md:justify-self-end lg:row-start-3">
           <img
-            src="src/assets/shared/desktop/icon-facebook.svg"
+            src="/src/assets/shared/desktop/icon-facebook.svg"
             className="inline cursor-pointer"
           />
           <img
-            src="src/assets/shared/desktop/icon-twitter.svg"
+            src="/src/assets/shared/desktop/icon-twitter.svg"
             className="inline cursor-pointer"
           />
           <img
-            src="src/assets/shared/desktop/icon-instagram.svg"
+            src="/src/assets/shared/desktop/icon-instagram.svg"
             className="inline cursor-pointer"
           />
         </div>

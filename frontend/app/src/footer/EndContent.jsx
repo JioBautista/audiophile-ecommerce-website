@@ -8,15 +8,15 @@ function EndContent() {
     >
       <div>
         <img
-          src="src/assets/shared/mobile/image-best-gear.jpg"
+          src="/src/assets/shared/mobile/image-best-gear.jpg"
           className="rounded-lg md:hidden"
         />
         <img
-          src="src/assets/shared/tablet/image-best-gear.jpg"
+          src="/src/assets/shared/tablet/image-best-gear.jpg"
           className="hidden rounded-lg md:block lg:hidden"
         />
         <img
-          src="src/assets/shared/desktop/image-best-gear.jpg"
+          src="/src/assets/shared/desktop/image-best-gear.jpg"
           className="hidden rounded-lg lg:block"
         />
       </div>
