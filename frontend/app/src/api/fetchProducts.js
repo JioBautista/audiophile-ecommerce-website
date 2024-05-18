@@ -1,4 +1,4 @@
-export async function fetchHeadphones() {
+export async function fetchProducts() {
   try {
     const response = await fetch("/src/data/data.json");
     return response.json();
