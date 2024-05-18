@@ -13,7 +13,7 @@ function Products({ data }) {
         data.map((items, index) => (
           <React.Fragment key={items.id}>
             <div
-              className={`space-y-10 px-5 ${index === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} lg:flex`}
+              className={`space-y-10 ${index === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} lg:flex`}
             >
               <div>
                 <img

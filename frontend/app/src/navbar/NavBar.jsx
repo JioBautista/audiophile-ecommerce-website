@@ -33,8 +33,12 @@ function NavBar() {
             <Link {...linkStyles} to="/category/headphones">
               HEADPHONES
             </Link>
-            <Link {...linkStyles}>SPEAKERS</Link>
-            <Link {...linkStyles}>EARPHONES</Link>
+            <Link {...linkStyles} to="/category/speakers">
+              SPEAKERS
+            </Link>
+            <Link {...linkStyles} to="/category/earphones">
+              EARPHONES
+            </Link>
           </div>
           <img
             src="/src/assets/cart-icon-white.png"
