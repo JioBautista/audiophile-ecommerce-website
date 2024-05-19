@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../components/Container";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 function Products({ data }) {
   return (
@@ -50,7 +51,9 @@ function Products({ data }) {
                 <p className="text-gray-500 md:px-10 lg:px-0 ">
                   {items.description}
                 </p>
-                <Button styles={"bg-orange-500 text-white"}>SEE PRODUCT</Button>
+                <Button styles={"bg-orange-500 text-white"}>
+                  <Link to={`/product-details/${items.id}`}>SEE PRODUCT</Link>
+                </Button>
               </div>
             </div>
           </React.Fragment>
