@@ -11,6 +11,7 @@ function Product({ data }) {
               <img src={items.categoryImage.mobile} />
               <div>
                 <h1>{items.name}</h1>
+                
               </div>
             </div>
           </>
