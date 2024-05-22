@@ -51,9 +51,11 @@ function Products({ data }) {
                 <p className="text-gray-500 md:px-10 lg:px-0 ">
                   {items.description}
                 </p>
-                <Button styles={"bg-orange-500 text-white"}>
-                  <Link to={`/product-details/${items.id}`}>SEE PRODUCT</Link>
-                </Button>
+                <Link to={`/product-details/${items.id}`} className="block">
+                  <Button styles={"bg-orange-500 text-white"}>
+                    SEE PRODUCT
+                  </Button>
+                </Link>
               </div>
             </div>
           </React.Fragment>

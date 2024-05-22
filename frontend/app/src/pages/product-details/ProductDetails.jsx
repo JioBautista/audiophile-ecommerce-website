@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import Features from "./Features";
 import Container from "../../components/Container";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProductDetail } from "../../api/fetchProductDetail";
@@ -26,6 +27,7 @@ function ProductDetails() {
   return (
     <Container styles={"px-5"}>
       <Product data={product} />
+      <Features data={product} />
     </Container>
   );
 }
