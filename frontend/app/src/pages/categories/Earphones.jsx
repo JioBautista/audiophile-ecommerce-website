@@ -22,7 +22,7 @@ function Earphones() {
   return (
     <>
       <div className="bg-black px-5 py-10 text-center text-3xl font-semibold tracking-widest text-white">
-        <h1>SPEAKERS</h1>
+        <h1>EARPHONES</h1>
       </div>
       <Products data={earphones} />
       <Category />
