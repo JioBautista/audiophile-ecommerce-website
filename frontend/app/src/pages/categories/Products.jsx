@@ -48,7 +48,7 @@ function Products({ data }) {
                 <h1 className="text-4xl font-semibold tracking-widest md:px-28 lg:px-0">
                   {items.name.toUpperCase()}
                 </h1>
-                <p className="text-gray-500 md:px-10 lg:px-0 ">
+                <p className="text-gray-500 md:px-10 lg:px-0">
                   {items.description}
                 </p>
                 <Link to={`/product-details/${items.id}`} className="block">

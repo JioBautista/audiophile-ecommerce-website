@@ -21,7 +21,7 @@ function EndContent() {
         />
       </div>
 
-      <div className="mx-auto max-w-[600px] space-y-5 px-5 py-10 text-center lg:pr-20 lg:text-start">
+      <div className="container mx-auto space-y-5 px-5 py-10 text-center lg:pr-20 lg:text-start">
         <h1 className="my-5 text-3xl font-bold tracking-widest md:text-4xl">
           BRINGING YOU THE <span className="text-orange-500">BEST</span> AUDIO
           GEAR
