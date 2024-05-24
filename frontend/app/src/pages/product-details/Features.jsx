@@ -3,7 +3,6 @@ import Container from "../../components/Container";
 
 function Features({ data }) {
   const includes = data && data[0].includes;
-  console.log(includes);
   return (
     <Container styles={"px-5 space-y-20 lg:flex lg:space-y-0 lg:gap-20"}>
       <div className="max-w-[650px] space-y-5">
