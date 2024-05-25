@@ -9,7 +9,7 @@ function ImageGallery({ data }) {
   return (
     <Container
       styles={
-        "px-5 space-y-5 md:grid-cols-auto md:grid  md:space-y-0 md:gap-3 lg:grid-cols-2"
+        "px-5  space-y-5 md:grid-cols-auto md:grid  md:space-y-0 md:gap-3 lg:grid-rows-6 lg:grid-cols-5 lg:gap-0 lg:gap-x-5"
       }
     >
       {data &&
@@ -27,7 +27,7 @@ function ImageGallery({ data }) {
 
             <img
               src={items.gallery.first.desktop.replace(current, replaced)}
-              className="hidden w-[445px] rounded-lg lg:block"
+              className="col-start-1  col-end-3 row-start-1 row-end-4 hidden rounded-lg lg:block"
             />
 
             {/* SECOND IMAGE */}
@@ -43,7 +43,7 @@ function ImageGallery({ data }) {
 
             <img
               src={items.gallery.second.desktop.replace(current, replaced)}
-              className="hidden rounded-lg  md:self-end lg:block"
+              className="col-start-1 col-end-3  row-start-4 row-end-7 hidden rounded-lg md:self-end lg:block"
             />
             {/* THIRD IMAGE */}
             <img
@@ -58,7 +58,7 @@ function ImageGallery({ data }) {
 
             <img
               src={items.gallery.third.desktop.replace(current, replaced)}
-              className="col-start-2 col-end-4 row-start-1 row-end-3 hidden rounded-lg lg:block"
+              className="col-start-3 col-end-6 row-start-1 row-end-7 hidden rounded-lg lg:block"
             />
           </>
         ))}

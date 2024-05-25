@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 function Product({ data }) {
   console.log(data);
   return (
-    <div className="space-y-5 px-5 py-10 md:flex md:items-center">
+    <div className="space-y-5 px-5 py-5 md:flex md:items-center">
       {data &&
         data.map((items) => (
           <>
