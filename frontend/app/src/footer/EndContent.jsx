@@ -6,7 +6,7 @@ function EndContent() {
     <Container
       styles={"px-5 space-y-5 py-10 md:py-20 lg:flex flex-row-reverse"}
     >
-      <div>
+      <div className="px-5">
         <img
           src="/src/assets/shared/mobile/image-best-gear.jpg"
           className="rounded-lg md:hidden"
