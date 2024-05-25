@@ -1,5 +1,6 @@
 import React from "react";
 import Category from "./Category";
+import AddCart from "../add-to-cart/AddCart";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
 
@@ -42,16 +43,18 @@ function NavBar() {
           </div>
           <img
             src="/src/assets/cart-icon-white.png"
+            alt="cart-icon"
             className="w-8 cursor-pointer"
           />
         </Container>
         {isMobileMenuOpen && (
           <>
-            <div className="absolute left-0 right-0 bg-white">
+            <div className="bg-white">
               <Category />
             </div>
           </>
         )}
+        <AddCart />
       </div>
     </>
   );
