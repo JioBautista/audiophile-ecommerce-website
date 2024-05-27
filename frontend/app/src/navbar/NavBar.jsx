@@ -1,10 +1,13 @@
 import React from "react";
 import Category from "./Category";
-import AddCart from "../add-to-cart/AddCart";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
+import { useStore } from "../store/useStore";
 
 function NavBar() {
+  const { toggleCart } = useStore((state) => ({
+    toggleCart: state.toggleCart,
+  }));
   const [isMobileMenuOpen, setIsOpen] = React.useState(false);
 
   const linkStyles = {
@@ -15,9 +18,10 @@ function NavBar() {
   function openMobileMenu() {
     setIsOpen(!isMobileMenuOpen);
   }
+
   return (
     <>
-      <div className="bg-black">
+      <div className="relative bg-black">
         <Container styles={"p-5 flex items-center justify-between md:px-8"}>
           <img
             src="/src/assets/mobile-menu-icon-white.svg"
@@ -45,6 +49,7 @@ function NavBar() {
             src="/src/assets/cart-icon-white.png"
             alt="cart-icon"
             className="w-8 cursor-pointer"
+            onClick={() => toggleCart()}
           />
         </Container>
         {isMobileMenuOpen && (
@@ -54,7 +59,6 @@ function NavBar() {
             </div>
           </>
         )}
-        <AddCart />
       </div>
     </>
   );
