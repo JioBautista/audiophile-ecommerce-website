@@ -2,8 +2,12 @@ import React from "react";
 import Category from "./Category";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
+import { useStore } from "../store/useStore";
 
 function NavBar() {
+  const { toggleCart } = useStore((state) => ({
+    toggleCart: state.toggleCart,
+  }));
   const [isMobileMenuOpen, setIsOpen] = React.useState(false);
 
   const linkStyles = {
@@ -14,9 +18,10 @@ function NavBar() {
   function openMobileMenu() {
     setIsOpen(!isMobileMenuOpen);
   }
+
   return (
     <>
-      <div className="bg-black">
+      <div className="relative bg-black">
         <Container styles={"p-5 flex items-center justify-between md:px-8"}>
           <img
             src="/src/assets/mobile-menu-icon-white.svg"
@@ -42,12 +47,14 @@ function NavBar() {
           </div>
           <img
             src="/src/assets/cart-icon-white.png"
+            alt="cart-icon"
             className="w-8 cursor-pointer"
+            onClick={() => toggleCart()}
           />
         </Container>
         {isMobileMenuOpen && (
           <>
-            <div className="absolute left-0 right-0 bg-white">
+            <div className="bg-white">
               <Category />
             </div>
           </>
