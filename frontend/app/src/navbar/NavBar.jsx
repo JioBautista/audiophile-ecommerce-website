@@ -1,6 +1,7 @@
 import React from "react";
 import Category from "./Category";
 import Container from "../components/Container";
+import Overlay from "../components/Overlay";
 import { Link } from "react-router-dom";
 import { useStore } from "../store/useStore";
 
@@ -54,7 +55,7 @@ function NavBar() {
         </Container>
         {isMobileMenuOpen && (
           <>
-            <div className="bg-white">
+            <div className="absolute inset-x-0 bg-white">
               <Category />
             </div>
           </>
