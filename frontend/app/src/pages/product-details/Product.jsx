@@ -4,12 +4,32 @@ import Button from "../../components/Button";
 function Product({ data }) {
   const [quantity, setQuantity] = React.useState(0);
 
-  const productOrder = {
+  const product = {
     name: data && data[0].name,
     price: data && data[0].price,
     quantity: quantity,
   };
 
+  const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+
+  if (shoppingCart === null) {
+    sessionStorage.setItem("shoppingCart", JSON.stringify([]));
+  }
+
+  function addToCart() {
+    const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+    shoppingCart.push(product);
+    sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+  }
+
+  function incrementQuantity() {
+    setQuantity(quantity + 1);
+  }
+
+  function decrementQuantity() {
+    setQuantity(quantity - 1);
+  }
+  console.log(data);
   return (
     <div className="space-y-5 px-5 py-5 md:flex md:items-center">
       {data &&
@@ -41,18 +61,27 @@ function Product({ data }) {
                 $ {items.price}
               </p>
               <div className="flex gap-5">
-                <div className="flex justify-center gap-5 bg-gray-200 px-5 py-3">
-                  <button>-</button>
-                  <p>1</p>
-                  <button>+</button>
+                <div className="flex justify-center gap-5 bg-gray-200">
+                  <div
+                    className="cursor-pointer px-4 py-2"
+                    onClick={decrementQuantity}
+                  >
+                    <button>-</button>
+                  </div>
+                  <p className="p-2">{quantity}</p>
+                  <div
+                    className="cursor-pointer px-4 py-2"
+                    onClick={incrementQuantity}
+                  >
+                    <button>+</button>
+                  </div>
                 </div>
-                <Button styles={"bg-orange-500 text-white"}>ADD TO CART</Button>
-                {/* <button
+                <button
                   onClick={addToCart}
-                  className="bg-blue-500 px-5 py-2 text-white"
+                  className="bg-orange-500 px-10 py-2 text-white"
                 >
                   ADD TO CART
-                </button> */}
+                </button>
               </div>
             </div>
           </>
