@@ -2,7 +2,14 @@ import React from "react";
 import Button from "../../components/Button";
 
 function Product({ data }) {
-  console.log(data);
+  const [quantity, setQuantity] = React.useState(0);
+
+  const productOrder = {
+    name: data && data[0].name,
+    price: data && data[0].price,
+    quantity: quantity,
+  };
+
   return (
     <div className="space-y-5 px-5 py-5 md:flex md:items-center">
       {data &&
@@ -40,6 +47,12 @@ function Product({ data }) {
                   <button>+</button>
                 </div>
                 <Button styles={"bg-orange-500 text-white"}>ADD TO CART</Button>
+                {/* <button
+                  onClick={addToCart}
+                  className="bg-blue-500 px-5 py-2 text-white"
+                >
+                  ADD TO CART
+                </button> */}
               </div>
             </div>
           </>
