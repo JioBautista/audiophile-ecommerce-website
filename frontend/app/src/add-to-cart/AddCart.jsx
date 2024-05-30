@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../components/Container";
 import Button from "../components/Button";
 import Overlay from "../components/Overlay";
+import { Link } from "react-router-dom";
 
 function AddCart() {
   const [flag, setFlag] = React.useState(false);
@@ -86,9 +87,11 @@ function AddCart() {
           <h1 className="text-gray-500">TOTAL</h1>
           <p>${total}</p>
         </div>
-        <Button styles={"bg-orange-500 text-white tracking-widest w-full"}>
-          CHECKOUT
-        </Button>
+        <Link to="/checkout">
+          <Button styles={"bg-orange-500 text-white tracking-widest w-full"}>
+            CHECKOUT
+          </Button>
+        </Link>
       </Container>
       <Overlay />
     </React.Fragment>
