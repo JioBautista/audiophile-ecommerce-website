@@ -26,7 +26,6 @@ function ProductDetails() {
   const product =
     data && data.filter((items) => items.id === parseInt(productId));
 
-  console.log(product);
   return (
     <Container styles={"px-5 space-y-10"}>
       <Product data={product} />

@@ -14,7 +14,7 @@ function ImageGallery({ data }) {
     >
       {data &&
         data.map((items) => (
-          <>
+          <React.Fragment key={items.id}>
             {/* FIRST IMAGE */}
             <img
               src={items.gallery.first.mobile.replace(current, replaced)}
@@ -60,7 +60,7 @@ function ImageGallery({ data }) {
               src={items.gallery.third.desktop.replace(current, replaced)}
               className="col-start-3 col-end-6 row-start-1 row-end-7 hidden rounded-lg lg:block"
             />
-          </>
+          </React.Fragment>
         ))}
     </Container>
   );

@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../components/Container";
+import { useStore } from "../store/useStore";
 
 function MobileMenu() {
+  const { toggleMobileMenu, mobileMenu } = useStore((state) => ({
+    toggleMobileMenu: state.toggleMobileMenu,
+    mobileMenu: state.mobileMenu,
+  }));
   const cardStyles = {
     className: "bg-zinc-100 w-full rounded-md p-5 text-center",
   };
@@ -26,7 +31,10 @@ function MobileMenu() {
           <div {...cardStyles}>
             <img src="/src/assets/headphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>HEADPHONES</h2>
-            <div className="flex items-center justify-center gap-3">
+            <div
+              className="flex items-center justify-center gap-3"
+              onClick={() => mobileMenu && toggleMobileMenu()}
+            >
               <Link
                 {...linkStyles}
                 className="text-gray-500 hover:text-orange-500"
@@ -41,7 +49,10 @@ function MobileMenu() {
           <div {...cardStyles}>
             <img src="/src/assets/speakers-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>SPEAKERS</h2>
-            <div className="flex items-center justify-center gap-3">
+            <div
+              className="flex items-center justify-center gap-3"
+              onClick={() => mobileMenu && toggleMobileMenu()}
+            >
               <Link
                 {...linkStyles}
                 className="text-gray-500 hover:text-orange-500"
@@ -56,7 +67,10 @@ function MobileMenu() {
           <div {...cardStyles}>
             <img src="/src/assets/earphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>EARPHONES</h2>
-            <div className="flex items-center justify-center gap-3">
+            <div
+              className="flex items-center justify-center gap-3"
+              onClick={() => mobileMenu && toggleMobileMenu()}
+            >
               <Link
                 {...linkStyles}
                 className="text-gray-500 hover:text-orange-500"
