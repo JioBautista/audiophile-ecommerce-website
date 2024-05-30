@@ -5,7 +5,8 @@ import Overlay from "../components/Overlay";
 
 function AddCart() {
   const [flag, setFlag] = React.useState(false);
-  const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+  const data = JSON.parse(sessionStorage.getItem("shoppingCart"));
+  const [shoppingCart, setCart] = React.useState(data);
   const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
   const total =
     prices &&
@@ -17,7 +18,6 @@ function AddCart() {
   }
 
   React.useEffect(() => {}, [flag]);
-  console.log(shoppingCart);
   return (
     <React.Fragment>
       <Container
@@ -49,11 +49,15 @@ function AddCart() {
                   <p>${items.price}</p>
                 </div>
 
-                <div className="flex items-center justify-center gap-1 bg-gray-200">
+                <div className="flex items-center justify-center gap-1 bg-gray-200 py-2">
                   <div className="cursor-pointer px-3">
                     <button>-</button>
                   </div>
-                  <p className="p-2">{items.quantity}</p>
+                  <input
+                    defaultValue={items.quantity}
+                    className="w-10 bg-transparent text-center"
+                  />
+                  {/* <p className="p-2">x {items.quantity}</p> */}
                   <div className="cursor-pointer px-3">
                     <button>+</button>
                   </div>
