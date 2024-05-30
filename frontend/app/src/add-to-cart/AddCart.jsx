@@ -5,15 +5,26 @@ import Overlay from "../components/Overlay";
 
 function AddCart() {
   const [flag, setFlag] = React.useState(false);
-  const data = JSON.parse(sessionStorage.getItem("shoppingCart"));
-  const [shoppingCart, setCart] = React.useState(data);
+  const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
   const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
   const total =
     prices &&
-    prices.reduce((prevValue, currentValue) => prevValue + currentValue);
+    prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
 
   function removeAllItems() {
     sessionStorage.clear();
+    setFlag(!flag);
+  }
+
+  function addItems(index) {
+    shoppingCart[index].quantity += 1;
+    sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    setFlag(!flag);
+  }
+
+  function removeItems(index) {
+    shoppingCart[index].quantity -= 1;
+    sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     setFlag(!flag);
   }
 
@@ -50,15 +61,17 @@ function AddCart() {
                 </div>
 
                 <div className="flex items-center justify-center gap-1 bg-gray-200 py-2">
-                  <div className="cursor-pointer px-3">
+                  <div
+                    className="cursor-pointer px-3"
+                    onClick={() => removeItems(index)}
+                  >
                     <button>-</button>
                   </div>
-                  <input
-                    defaultValue={items.quantity}
-                    className="w-10 bg-transparent text-center"
-                  />
-                  {/* <p className="p-2">x {items.quantity}</p> */}
-                  <div className="cursor-pointer px-3">
+                  <p className="p-2">{items.quantity}</p>
+                  <div
+                    className="cursor-pointer px-3"
+                    onClick={() => addItems(index)}
+                  >
                     <button>+</button>
                   </div>
                 </div>
