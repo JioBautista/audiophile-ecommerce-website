@@ -1,13 +1,14 @@
 import React from "react";
-import Button from "../../components/Button";
 
 function Product({ data }) {
   const [quantity, setQuantity] = React.useState(0);
 
   const product = {
+    id: data[0].id,
     name: data && data[0].name,
     price: data && data[0].price,
     quantity: quantity,
+    img: data && data[0].image.mobile,
   };
 
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
@@ -29,12 +30,11 @@ function Product({ data }) {
   function decrementQuantity() {
     setQuantity(quantity - 1);
   }
-  console.log(data);
   return (
     <div className="space-y-5 px-5 py-5 md:flex md:items-center">
       {data &&
         data.map((items) => (
-          <>
+          <React.Fragment key={items.id}>
             <img
               src={items.image.mobile.replace("./assets", "/src/assets")}
               className="rounded-lg md:hidden"
@@ -84,7 +84,7 @@ function Product({ data }) {
                 </button>
               </div>
             </div>
-          </>
+          </React.Fragment>
         ))}
     </div>
   );
