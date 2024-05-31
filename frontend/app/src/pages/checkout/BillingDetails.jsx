@@ -12,12 +12,34 @@ function BillingDetails() {
       <h1 className="font-semibold tracking-widest text-orange-500">
         BILLING DETAILS
       </h1>
-      <p {...textStyles}>Name</p>
-      <input {...inputStyles} placeholder="Alexei Ward" />
-      <p {...textStyles}>Email Address</p>
-      <input {...inputStyles} type="email" placeholder="alexei@mail.com" />
-      <p {...textStyles}>Phone Number</p>
-      <input {...inputStyles} placeholder="+1 202-555-0136" />
+
+      <div className="md:grid md:grid-cols-2 md:gap-5">
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="name">
+            Name
+          </label>
+          <input {...inputStyles} placeholder="Alexei Ward" id="name" />
+        </div>
+
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="email">
+            Email Address
+          </label>
+          <input
+            {...inputStyles}
+            type="email"
+            placeholder="alexei@mail.com"
+            id="email"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="number">
+            Phone Number
+          </label>
+          <input {...inputStyles} placeholder="+1 202-555-0136" id="number" />
+        </div>
+      </div>
     </div>
   );
 }

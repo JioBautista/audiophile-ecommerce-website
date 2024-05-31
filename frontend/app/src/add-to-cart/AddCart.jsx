@@ -85,9 +85,9 @@ function AddCart() {
 
         <div className="flex justify-between">
           <h1 className="text-gray-500">TOTAL</h1>
-          <p>${total}</p>
+          <p className="font-bold tracking-wide">${total}</p>
         </div>
-        <Link to="/checkout">
+        <Link to="/checkout" className="block">
           <Button styles={"bg-orange-500 text-white tracking-widest w-full"}>
             CHECKOUT
           </Button>
