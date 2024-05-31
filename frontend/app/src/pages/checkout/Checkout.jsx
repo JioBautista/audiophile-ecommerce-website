@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import CheckoutDetails from "./CheckoutDetails";
 
 function Checkout() {
   return (
-    <div>Checkout</div>
-  )
+    <div className="bg-gray-100 p-5">
+      <CheckoutDetails />
+    </div>
+  );
 }
 
-export default Checkout
+export default Checkout;
