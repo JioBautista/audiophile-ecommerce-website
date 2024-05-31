@@ -13,7 +13,7 @@ function BillingDetails() {
         BILLING DETAILS
       </h1>
 
-      <div className="md:grid md:grid-cols-2 md:gap-5">
+      <div className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:space-y-0">
         <div className="space-y-2">
           <label {...textStyles} htmlFor="name">
             Name
