@@ -7,8 +7,11 @@ function Checkout() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div className="space-y-5 bg-gray-100 p-5 lg:flex lg:items-start lg:gap-8 lg:space-y-0">
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="bg-gray-100 p-5">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-5 lg:flex lg:items-start lg:gap-8 lg:space-y-0 lg:p-10"
+      >
         <CheckoutDetails register={register} />
         <Summary />
       </form>
