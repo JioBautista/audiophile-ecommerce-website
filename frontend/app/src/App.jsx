@@ -26,7 +26,7 @@ function App() {
       )}
       {cart && <AddCart />}
       <Outlet />
-      <EndContent />
+      {/* <EndContent /> */}
       <Footer />
     </div>
   );

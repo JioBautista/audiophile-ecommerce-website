@@ -1,6 +1,6 @@
 import React from "react";
 
-function ShippingDetails() {
+function ShippingDetails({ register }) {
   const inputStyles = {
     className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
   };
@@ -22,6 +22,7 @@ function ShippingDetails() {
             {...inputStyles}
             placeholder="1137 Williams Avenue"
             id="address"
+            {...register("address", { required: true })}
           />
         </div>
 
@@ -29,21 +30,36 @@ function ShippingDetails() {
           <label {...textStyles} htmlFor="zip">
             ZIP Code
           </label>
-          <input {...inputStyles} type="email" placeholder="10001" id="zip" />
+          <input
+            {...inputStyles}
+            placeholder="10001"
+            id="zip"
+            {...register("zipCode", { required: true })}
+          />
         </div>
 
         <div className="space-y-2">
           <label {...textStyles} htmlFor="city">
             City
           </label>
-          <input {...inputStyles} placeholder="New York" id="city" />
+          <input
+            {...inputStyles}
+            placeholder="New York"
+            id="city"
+            {...register("city", { required: true })}
+          />
         </div>
 
         <div className="space-y-2">
           <label {...textStyles} htmlFor="country">
             Country
           </label>
-          <input {...inputStyles} placeholder="United States" id="country" />
+          <input
+            {...inputStyles}
+            placeholder="United States"
+            id="country"
+            {...register("country", { required: true })}
+          />
         </div>
       </div>
     </div>
