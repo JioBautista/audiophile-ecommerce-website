@@ -48,9 +48,14 @@ function Summary() {
           <p className="font-bold tracking-wide">$0</p>
         </div>
 
-        <Button styles={"bg-orange-500 text-white tracking-widest w-full"}>
+        <button
+          className={
+            "w-full bg-orange-500 px-8 py-3 tracking-widest text-white"
+          }
+          type="submit"
+        >
           CONTINUE & PAY
-        </Button>
+        </button>
       </Container>
     </React.Fragment>
   );

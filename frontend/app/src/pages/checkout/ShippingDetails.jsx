@@ -1,6 +1,6 @@
 import React from "react";
 
-function ShippingDetails() {
+function ShippingDetails({ register }) {
   const inputStyles = {
     className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
   };
@@ -12,14 +12,56 @@ function ShippingDetails() {
       <h1 className="font-semibold tracking-widest text-orange-500">
         SHIPPING INFO
       </h1>
-      <p {...textStyles}>Address</p>
-      <input {...inputStyles} placeholder="1137 Williams Avenue" />
-      <p {...textStyles}>ZIP Code</p>
-      <input {...inputStyles} type="email" placeholder="10001" />
-      <p {...textStyles}>City</p>
-      <input {...inputStyles} placeholder="New York" />
-      <p {...textStyles}>Country</p>
-      <input {...inputStyles} placeholder="United States" />
+
+      <div className="space-y-5 md:grid md:grid-cols-2 md:grid-rows-3 md:gap-5 md:space-y-0">
+        <div className="space-y-2 md:col-span-2">
+          <label {...textStyles} htmlFor="address">
+            Address
+          </label>
+          <input
+            {...inputStyles}
+            placeholder="1137 Williams Avenue"
+            id="address"
+            {...register("address", { required: true })}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="zip">
+            ZIP Code
+          </label>
+          <input
+            {...inputStyles}
+            placeholder="10001"
+            id="zip"
+            {...register("zipCode", { required: true })}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="city">
+            City
+          </label>
+          <input
+            {...inputStyles}
+            placeholder="New York"
+            id="city"
+            {...register("city", { required: true })}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label {...textStyles} htmlFor="country">
+            Country
+          </label>
+          <input
+            {...inputStyles}
+            placeholder="United States"
+            id="country"
+            {...register("country", { required: true })}
+          />
+        </div>
+      </div>
     </div>
   );
 }

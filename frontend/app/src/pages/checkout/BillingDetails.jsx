@@ -1,6 +1,6 @@
 import React from "react";
 
-function BillingDetails() {
+function BillingDetails({ register }) {
   const inputStyles = {
     className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
   };
@@ -13,12 +13,17 @@ function BillingDetails() {
         BILLING DETAILS
       </h1>
 
-      <div className="md:grid md:grid-cols-2 md:gap-5">
+      <div className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:space-y-0">
         <div className="space-y-2">
           <label {...textStyles} htmlFor="name">
             Name
           </label>
-          <input {...inputStyles} placeholder="Alexei Ward" id="name" />
+          <input
+            {...inputStyles}
+            placeholder="Alexei Ward"
+            id="name"
+            {...register("customer", { required: true })}
+          />
         </div>
 
         <div className="space-y-2">
@@ -30,6 +35,7 @@ function BillingDetails() {
             type="email"
             placeholder="alexei@mail.com"
             id="email"
+            {...register("email", { required: true })}
           />
         </div>
 
@@ -37,7 +43,12 @@ function BillingDetails() {
           <label {...textStyles} htmlFor="number">
             Phone Number
           </label>
-          <input {...inputStyles} placeholder="+1 202-555-0136" id="number" />
+          <input
+            {...inputStyles}
+            placeholder="+1 202-555-0136"
+            id="number"
+            {...register("number", { required: true })}
+          />
         </div>
       </div>
     </div>
