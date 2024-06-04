@@ -8,6 +8,7 @@ function Summary() {
   const total =
     prices &&
     prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
+  const vat = total && total * 0.2;
   return (
     <React.Fragment>
       <Container styles={"bg-white p-5 rounded-md space-y-5"}>
@@ -45,7 +46,14 @@ function Summary() {
 
         <div className="flex justify-between">
           <h1 className="text-gray-500">VAT(INCLUDED)</h1>
-          <p className="font-bold tracking-wide">$0</p>
+          <p className="font-bold tracking-wide">${Math.round(vat)}</p>
+        </div>
+
+        <div className="flex justify-between">
+          <h1 className="text-gray-500">GRAND TOTAL</h1>
+          <p className="tracking wide font-bold tracking-wide text-orange-500">
+            ${total + 50}
+          </p>
         </div>
 
         <button

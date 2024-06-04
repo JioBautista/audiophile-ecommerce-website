@@ -1,6 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import Category from "../../navbar/Category";
+import EndContent from "../../footer/EndContent";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../../api/fetchProducts";
 
@@ -26,6 +27,7 @@ function Speakers() {
       </div>
       <Products data={speakers} />
       <Category />
+      <EndContent />
     </>
   );
 }

@@ -3,8 +3,12 @@ import Container from "../components/Container";
 import Button from "../components/Button";
 import Overlay from "../components/Overlay";
 import { Link } from "react-router-dom";
+import { useStore } from "../store/useStore";
 
 function AddCart() {
+  const { toggleCart } = useStore((state) => ({
+    toggleCart: state.toggleCart,
+  }));
   const [flag, setFlag] = React.useState(false);
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
   const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
@@ -42,7 +46,7 @@ function AddCart() {
             CART({shoppingCart && shoppingCart.length})
           </h1>
           <h2
-            className="cursor-pointer text-gray-500 underline"
+            className="cursor-pointer text-gray-500 underline hover:text-orange-500"
             onClick={removeAllItems}
           >
             Remove all
@@ -63,14 +67,14 @@ function AddCart() {
 
                 <div className="flex items-center justify-center gap-1 bg-gray-200 py-2">
                   <div
-                    className="cursor-pointer px-3"
+                    className="cursor-pointer px-3 hover:text-orange-500"
                     onClick={() => removeItems(index)}
                   >
                     <button>-</button>
                   </div>
                   <p className="p-2">{items.quantity}</p>
                   <div
-                    className="cursor-pointer px-3"
+                    className="cursor-pointer px-3 hover:text-orange-500"
                     onClick={() => addItems(index)}
                   >
                     <button>+</button>
@@ -88,9 +92,12 @@ function AddCart() {
           <p className="font-bold tracking-wide">${total}</p>
         </div>
         <Link to="/checkout" className="block">
-          <Button styles={"bg-orange-500 text-white tracking-widest w-full"}>
+          <button
+            className="w-full bg-orange-500 px-8 py-3 tracking-widest text-white hover:opacity-50"
+            onClick={toggleCart}
+          >
             CHECKOUT
-          </Button>
+          </button>
         </Link>
       </Container>
       <Overlay />

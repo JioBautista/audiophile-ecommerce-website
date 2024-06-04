@@ -4,7 +4,6 @@ import AddCart from "./add-to-cart/AddCart";
 import Category from "./navbar/Category";
 import Overlay from "./components/Overlay";
 import Footer from "./footer/Footer";
-import EndContent from "./footer/EndContent";
 import { Outlet } from "react-router-dom";
 import { useStore } from "./store/useStore";
 
@@ -26,7 +25,6 @@ function App() {
       )}
       {cart && <AddCart />}
       <Outlet />
-      {/* <EndContent /> */}
       <Footer />
     </div>
   );
