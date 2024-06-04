@@ -1,7 +1,11 @@
 import React from "react";
+import { useStore } from "../../store/useStore";
 
 function Product({ data }) {
   const [quantity, setQuantity] = React.useState(0);
+  const { toggleCart } = useStore((state) => ({
+    toggleCart: state.toggleCart,
+  }));
 
   const product = {
     id: data[0].id,
@@ -21,6 +25,7 @@ function Product({ data }) {
     const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
     shoppingCart.push(product);
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    toggleCart();
   }
 
   function incrementQuantity() {

@@ -15,6 +15,9 @@ function NavBar() {
       "text-white mx-5 hover:text-orange-700 font-medium tracking-widest",
   };
 
+  const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+
+  console.log(shoppingCart);
   return (
     <>
       <div className="relative bg-black">
@@ -44,12 +47,20 @@ function NavBar() {
               EARPHONES
             </Link>
           </div>
-          <img
-            src="/src/assets/cart-icon-white.png"
-            alt="cart-icon"
-            className="w-8 cursor-pointer"
-            onClick={() => toggleCart()}
-          />
+
+          <div className="relative">
+            <img
+              src="/src/assets/cart-icon-white.png"
+              alt="cart-icon"
+              className="w-8 cursor-pointer"
+              onClick={() => toggleCart()}
+            />
+            {shoppingCart && (
+              <div className="absolute -top-3 left-5 w-[25px] rounded-full bg-orange-500 p-1 text-center text-white">
+                <p className="text-sm">{shoppingCart.length}</p>
+              </div>
+            )}
+          </div>
         </Container>
       </div>
     </>

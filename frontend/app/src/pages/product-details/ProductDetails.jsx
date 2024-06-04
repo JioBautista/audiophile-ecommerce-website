@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import EndContent from "../../footer/EndContent";
 import Features from "./Features";
 import ImageGallery from "./ImageGallery";
 import Suggestions from "./Suggestions";
@@ -33,6 +34,7 @@ function ProductDetails() {
       <ImageGallery data={product} />
       <Suggestions data={product} />
       <Category />
+      <EndContent />
     </Container>
   );
 }
