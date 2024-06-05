@@ -15,10 +15,18 @@ function Footer() {
         </div>
 
         <div className="items-center justify-center space-y-5 md:col-start-1 md:col-end-3 md:flex md:gap-5 md:space-y-0 lg:col-start-2 lg:justify-self-end">
-          <Link className="block">HOME</Link>
-          <Link className="block">HEADPHONES</Link>
-          <Link className="block">SPEAKERS</Link>
-          <Link className="block">EARPHONES</Link>
+          <Link className="block">
+            <p className="tracking-widest hover:text-orange-500">HOME</p>
+          </Link>
+          <Link className="block">
+            <p className="tracking-widest hover:text-orange-500">HEADPHONES</p>
+          </Link>
+          <Link className="block">
+            <p className="tracking-widest hover:text-orange-500">SPEAKERS</p>
+          </Link>
+          <Link className="block">
+            <p className="tracking-widest hover:text-orange-500">EARPHONES</p>
+          </Link>
         </div>
 
         <div className="md:col-start-1 md:col-end-3 md:row-start-3 lg:col-end-2 lg:row-start-2 lg:row-end-4">

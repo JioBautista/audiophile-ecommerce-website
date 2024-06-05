@@ -4,7 +4,11 @@ import Summary from "./Summary";
 import { useForm } from "react-hook-form";
 
 function Checkout() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
     <div className="bg-gray-100 p-5">
@@ -12,7 +16,7 @@ function Checkout() {
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-5 lg:flex lg:items-start lg:gap-8 lg:space-y-0 lg:p-10"
       >
-        <CheckoutDetails register={register} />
+        <CheckoutDetails register={register} errors={errors} />
         <Summary />
       </form>
     </div>

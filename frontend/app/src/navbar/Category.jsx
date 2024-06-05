@@ -20,10 +20,6 @@ function MobileMenu() {
     className: "mx-auto mb-3",
   };
 
-  const linkStyles = {
-    className: "tracking-wdiest font-semibold text-gray-500",
-  };
-
   return (
     <>
       <Container>
@@ -36,8 +32,7 @@ function MobileMenu() {
               onClick={() => mobileMenu && toggleMobileMenu()}
             >
               <Link
-                {...linkStyles}
-                className="text-gray-500 hover:text-orange-500"
+                className="tracking-widest text-gray-500 hover:text-orange-500"
                 to="/category/headphones"
               >
                 SHOP
@@ -54,8 +49,7 @@ function MobileMenu() {
               onClick={() => mobileMenu && toggleMobileMenu()}
             >
               <Link
-                {...linkStyles}
-                className="text-gray-500 hover:text-orange-500"
+                className="tracking-widest text-gray-500 hover:text-orange-500"
                 to="/category/speakers"
               >
                 SHOP
@@ -72,8 +66,7 @@ function MobileMenu() {
               onClick={() => mobileMenu && toggleMobileMenu()}
             >
               <Link
-                {...linkStyles}
-                className="text-gray-500 hover:text-orange-500"
+                className="tracking-widest text-gray-500 hover:text-orange-500"
                 to="/category/earphones"
               >
                 SHOP

@@ -1,8 +1,8 @@
 import React from "react";
 
-function BillingDetails({ register }) {
+function BillingDetails({ register, errors }) {
   const inputStyles = {
-    className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
+    className: `border-gray-300 border-2 w-full px-5 py-4 rounded-md focus:outline-orange-500  focus:invalid:outline-red-500 cursor-pointer`,
   };
   const textStyles = {
     className: "font-semibold",
@@ -22,7 +22,8 @@ function BillingDetails({ register }) {
             {...inputStyles}
             placeholder="Alexei Ward"
             id="name"
-            {...register("customer", { required: true })}
+            required
+            {...register("customer")}
           />
         </div>
 
@@ -35,6 +36,7 @@ function BillingDetails({ register }) {
             type="email"
             placeholder="alexei@mail.com"
             id="email"
+            required
             {...register("email", { required: true })}
           />
         </div>

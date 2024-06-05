@@ -24,7 +24,7 @@ function HomeZx9() {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <Button styles={"bg-black text-white hover:bg-zinc-800"}>
+        <Button styles={"bg-black text-white hover:bg-gray-700"}>
           SEE PRODUCT
         </Button>
       </div>

@@ -52,7 +52,9 @@ function Products({ data }) {
                   {items.description}
                 </p>
                 <Link to={`/product-details/${items.id}`} className="block">
-                  <Button styles={"bg-orange-500 text-white"}>
+                  <Button
+                    styles={"bg-orange-500 text-white hover:bg-orange-300"}
+                  >
                     SEE PRODUCT
                   </Button>
                 </Link>

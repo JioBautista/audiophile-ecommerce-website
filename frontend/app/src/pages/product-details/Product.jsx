@@ -68,14 +68,14 @@ function Product({ data }) {
               <div className="flex gap-5">
                 <div className="flex justify-center gap-5 bg-gray-200">
                   <div
-                    className="cursor-pointer px-4 py-2"
+                    className="cursor-pointer px-4 py-2 hover:text-orange-500"
                     onClick={decrementQuantity}
                   >
                     <button>-</button>
                   </div>
                   <p className="p-2">{quantity}</p>
                   <div
-                    className="cursor-pointer px-4 py-2"
+                    className="cursor-pointer px-4 py-2 hover:text-orange-500"
                     onClick={incrementQuantity}
                   >
                     <button>+</button>
@@ -83,7 +83,7 @@ function Product({ data }) {
                 </div>
                 <button
                   onClick={addToCart}
-                  className="bg-orange-500 px-10 py-2 text-white"
+                  className="bg-orange-500 px-10 py-2 text-white hover:bg-orange-300"
                 >
                   ADD TO CART
                 </button>

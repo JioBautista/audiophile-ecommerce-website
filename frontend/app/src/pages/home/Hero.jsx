@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../../components/Container";
-import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -18,13 +18,15 @@ function Hero() {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button
-          className={
-            "cursor-pointer bg-orange-500 px-8 py-3 text-white hover:bg-orange-300"
-          }
-        >
-          SEE PRODUCT
-        </button>
+        <Link to="/product-details/4">
+          <button
+            className={
+              "cursor-pointer bg-orange-500 px-8 py-3 text-white hover:bg-orange-300"
+            }
+          >
+            SEE PRODUCT
+          </button>
+        </Link>
       </Container>
     </div>
   );
