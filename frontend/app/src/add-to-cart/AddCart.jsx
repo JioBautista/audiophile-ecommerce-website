@@ -6,10 +6,11 @@ import { Link } from "react-router-dom";
 import { useStore } from "../store/useStore";
 
 function AddCart() {
-  const { toggleCart } = useStore((state) => ({
+  const { toggleCart, toggleFlag, flag } = useStore((state) => ({
+    flag: state.flag,
     toggleCart: state.toggleCart,
+    toggleFlag: state.toggleFlag,
   }));
-  const [flag, setFlag] = React.useState(false);
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
   const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
   const total =
@@ -18,19 +19,19 @@ function AddCart() {
 
   function removeAllItems() {
     sessionStorage.clear();
-    setFlag(!flag);
+    toggleFlag();
   }
 
   function addItems(index) {
     shoppingCart[index].quantity += 1;
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-    setFlag(!flag);
+    toggleFlag();
   }
 
   function removeItems(index) {
     shoppingCart[index].quantity -= 1;
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-    setFlag(!flag);
+    toggleFlag();
   }
 
   React.useEffect(() => {}, [flag]);

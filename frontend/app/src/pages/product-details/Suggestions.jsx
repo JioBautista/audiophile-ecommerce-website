@@ -45,5 +45,3 @@ function Suggestions({ data }) {
 }
 
 export default Suggestions;
-
-const numbers = ["hi", "abc", "abc", "abc"];

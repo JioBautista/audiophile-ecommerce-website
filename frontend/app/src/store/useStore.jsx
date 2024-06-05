@@ -5,4 +5,6 @@ export const useStore = create((set) => ({
   toggleCart: () => set((state) => ({ cart: !state.cart })),
   mobileMenu: false,
   toggleMobileMenu: () => set((state) => ({ mobileMenu: !state.mobileMenu })),
+  flag: false,
+  toggleFlag: () => set((state) => ({ flag: !state.flag })),
 }));

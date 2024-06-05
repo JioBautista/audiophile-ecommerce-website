@@ -2,7 +2,8 @@ import React from "react";
 
 function ShippingDetails({ register }) {
   const inputStyles = {
-    className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
+    className:
+      "border-gray-300 border-2 w-full px-5 py-4 rounded-md focus:outline-orange-500  focus:invalid:outline-red-500 cursor-pointer",
   };
   const textStyles = {
     className: "font-semibold",
@@ -22,6 +23,7 @@ function ShippingDetails({ register }) {
             {...inputStyles}
             placeholder="1137 Williams Avenue"
             id="address"
+            required
             {...register("address", { required: true })}
           />
         </div>
@@ -34,6 +36,7 @@ function ShippingDetails({ register }) {
             {...inputStyles}
             placeholder="10001"
             id="zip"
+            required
             {...register("zipCode", { required: true })}
           />
         </div>
@@ -46,6 +49,7 @@ function ShippingDetails({ register }) {
             {...inputStyles}
             placeholder="New York"
             id="city"
+            required
             {...register("city", { required: true })}
           />
         </div>
@@ -58,6 +62,7 @@ function ShippingDetails({ register }) {
             {...inputStyles}
             placeholder="United States"
             id="country"
+            required
             {...register("country", { required: true })}
           />
         </div>

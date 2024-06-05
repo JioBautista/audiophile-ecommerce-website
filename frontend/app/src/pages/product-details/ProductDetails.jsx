@@ -28,7 +28,7 @@ function ProductDetails() {
     data && data.filter((items) => items.id === parseInt(productId));
 
   return (
-    <Container styles={"px-5 space-y-28 py-10"}>
+    <Container styles={`px-5 space-y-28 py-10`}>
       <Product data={product} />
       <Features data={product} />
       <ImageGallery data={product} />

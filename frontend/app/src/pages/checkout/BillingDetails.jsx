@@ -1,6 +1,6 @@
 import React from "react";
 
-function BillingDetails({ register, errors }) {
+function BillingDetails({ register }) {
   const inputStyles = {
     className: `border-gray-300 border-2 w-full px-5 py-4 rounded-md focus:outline-orange-500  focus:invalid:outline-red-500 cursor-pointer`,
   };
@@ -49,6 +49,7 @@ function BillingDetails({ register, errors }) {
             {...inputStyles}
             placeholder="+1 202-555-0136"
             id="number"
+            required
             {...register("number", { required: true })}
           />
         </div>

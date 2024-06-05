@@ -2,10 +2,11 @@ import React from "react";
 
 function PaymentDetails({ register }) {
   const inputStyles = {
-    className: "border-gray-300 border-2 w-full px-5 py-4 rounded-md",
+    className:
+      "border-gray-300 border-2 w-full px-5 py-4 rounded-md focus:outline-orange-500  focus:invalid:outline-red-500 cursor-pointer",
   };
   const textStyles = {
-    className: "font-semibold",
+    className: "font-semibold cursor-pointer",
   };
   return (
     <div className="space-y-4">
@@ -17,13 +18,14 @@ function PaymentDetails({ register }) {
         <p {...textStyles}>Payment Method</p>
 
         <div className="space-y-5">
-          <div className="w-full rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500">
+          <div className="w-full cursor-pointer rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500  focus:outline-orange-500 focus:invalid:outline-red-500">
             <input
               type="radio"
               name="payment_type"
               className="mr-5 cursor-pointer"
               id="e-money"
               value={"e-money"}
+              required
               {...register("payment_type", { required: true })}
             />
             <label htmlFor="e-money" {...textStyles}>
@@ -31,12 +33,13 @@ function PaymentDetails({ register }) {
             </label>
           </div>
 
-          <div className="w-full rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500">
+          <div className="w-full cursor-pointer rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500  focus:outline-orange-500 focus:invalid:outline-red-500">
             <input
               type="radio"
               name="payment_type"
               className="mr-5 cursor-pointer"
               id="cash"
+              required
               value={"cash-onDelivery"}
               {...register("payment_type", { required: true })}
             />
@@ -54,6 +57,7 @@ function PaymentDetails({ register }) {
             {...inputStyles}
             placeholder="238521993"
             id="emoney-number"
+            required
             {...register("emoney_number")}
           />
         </div>
@@ -66,6 +70,7 @@ function PaymentDetails({ register }) {
             {...inputStyles}
             placeholder="6891"
             id="emoney-pin"
+            required
             {...register("emoney_pin")}
           />
         </div>

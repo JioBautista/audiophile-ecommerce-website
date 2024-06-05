@@ -15,16 +15,16 @@ function Footer() {
         </div>
 
         <div className="items-center justify-center space-y-5 md:col-start-1 md:col-end-3 md:flex md:gap-5 md:space-y-0 lg:col-start-2 lg:justify-self-end">
-          <Link className="block">
+          <Link className="block" to={"/"}>
             <p className="tracking-widest hover:text-orange-500">HOME</p>
           </Link>
-          <Link className="block">
+          <Link className="block" to={"/category/headphones"}>
             <p className="tracking-widest hover:text-orange-500">HEADPHONES</p>
           </Link>
-          <Link className="block">
+          <Link className="block" to={"/category/speakers"}>
             <p className="tracking-widest hover:text-orange-500">SPEAKERS</p>
           </Link>
-          <Link className="block">
+          <Link className="block" to={"/category/earphones"}>
             <p className="tracking-widest hover:text-orange-500">EARPHONES</p>
           </Link>
         </div>

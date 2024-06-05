@@ -1,17 +1,22 @@
 import React from "react";
 import Container from "../../components/Container";
-import Button from "../../components/Button";
+import { useStore } from "../../store/useStore";
 
 function Summary() {
+  const { flag } = useStore((state) => ({ flag: state.flag }));
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
   const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
   const total =
     prices &&
     prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
   const vat = total && total * 0.2;
+
+  React.useEffect(() => {}, [flag]);
   return (
     <React.Fragment>
-      <Container styles={"bg-white p-5 rounded-md space-y-5"}>
+      <Container
+        styles={"bg-white p-5 rounded-md space-y-5  lg:py-10 lg:max-w-[350px]"}
+      >
         <h1 className="text-lg font-semibold tracking-widest">SUMMARY</h1>
         {shoppingCart ? (
           shoppingCart.map((items, index) => (
