@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 function HomeZx9() {
   return (
@@ -24,9 +25,11 @@ function HomeZx9() {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <Button styles={"bg-black text-white hover:bg-gray-700"}>
-          SEE PRODUCT
-        </Button>
+        <Link to="/product-details/6">
+          <Button styles={"bg-black text-white hover:bg-gray-700"}>
+            SEE PRODUCT
+          </Button>
+        </Link>
       </div>
     </div>
   );

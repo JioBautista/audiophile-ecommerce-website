@@ -16,8 +16,6 @@ function NavBar() {
   };
 
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
-
-  console.log(shoppingCart);
   return (
     <>
       <div className="relative bg-black">

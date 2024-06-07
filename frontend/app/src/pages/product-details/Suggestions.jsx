@@ -4,6 +4,8 @@ import Button from "../../components/Button";
 
 function Suggestions({ data }) {
   const others = data && data[0].others;
+
+  console.log(data);
   return (
     <Container styles={"px-5 text-center space-y-5"}>
       <h1 className="text-3xl font-semibold tracking-widest">
