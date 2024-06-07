@@ -27,6 +27,21 @@ function ProductDetails() {
   const product =
     data && data.filter((items) => items.id === parseInt(productId));
 
+  const others = product && product[0].others.map((items) => items.slug);
+
+  const suggestionIDs =
+    data &&
+    data.reduce((acc, obj1) => {
+      const matchingIDs = others && others.find((obj2) => obj1.slug === obj2);
+      if (matchingIDs) {
+        acc.push(obj1.id);
+      }
+      return acc;
+    }, []);
+
+  console.log(data);
+  console.log(others);
+  console.log(suggestionIDs);
   return (
     <Container styles={`px-5 space-y-28 py-10`}>
       <Product data={product} />
