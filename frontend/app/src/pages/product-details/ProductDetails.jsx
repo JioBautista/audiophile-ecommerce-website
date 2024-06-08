@@ -34,7 +34,7 @@ function ProductDetails() {
     data.reduce((acc, obj1) => {
       const matchingIDs = others && others.find((obj2) => obj1.slug === obj2);
       if (matchingIDs) {
-        acc.push(obj1.id);
+        acc.push(obj1);
       }
       return acc;
     }, []);
@@ -47,7 +47,7 @@ function ProductDetails() {
       <Product data={product} />
       <Features data={product} />
       <ImageGallery data={product} />
-      <Suggestions data={product} />
+      <Suggestions data={suggestionIDs} />
       <Category />
       <EndContent />
     </Container>

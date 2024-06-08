@@ -1,18 +1,18 @@
 import React from "react";
 import Container from "../../components/Container";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 function Suggestions({ data }) {
-  const others = data && data[0].others;
   return (
     <Container styles={"px-5 text-center space-y-5"}>
       <h1 className="text-3xl font-semibold tracking-widest">
         YOU MAY ALSO LIKE
       </h1>
       <div className="space-y-10 md:flex md:items-center md:gap-10 md:space-y-0 ">
-        {others &&
-          others.map((items, index) => (
-            <React.Fragment key={index}>
+        {data &&
+          data.map((items, index) => (
+            <React.Fragment key={items.id}>
               <div className="space-y-5">
                 <img
                   src={items.image.mobile.replace("./assets", "/src/assets")}
@@ -29,13 +29,15 @@ function Suggestions({ data }) {
                 <h1 className="text-xl font-semibold tracking-widest">
                   {items.name}
                 </h1>
-                <Button
-                  styles={
-                    "bg-orange-500 text-white tracking-widest hover:bg-orange-300"
-                  }
-                >
-                  SEE PRODUCT
-                </Button>
+                <Link to={`/product-details/${items.id}`} className="block">
+                  <Button
+                    styles={
+                      "bg-orange-500 text-white tracking-widest hover:bg-orange-300"
+                    }
+                  >
+                    SEE PRODUCT
+                  </Button>
+                </Link>
               </div>
             </React.Fragment>
           ))}
