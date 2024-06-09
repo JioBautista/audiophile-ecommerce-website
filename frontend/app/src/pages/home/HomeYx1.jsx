@@ -6,7 +6,7 @@ function HomeYx1() {
   return (
     <div className="flex flex-col justify-between gap-5 md:flex-row">
       <img
-        src="/assets/home/mobile/image-earphones-yx1.jpg"
+        src="assets/home/mobile/image-earphones-yx1.jpg"
         className=" rounded-xl md:hidden"
       />
       <img
