@@ -27,6 +27,7 @@ function PaymentDetails({ register }) {
               id="e-money"
               value={"e-money"}
               required
+              onClick={() => setCash(false)}
               {...register("payment_type", { required: true })}
             />
             <label htmlFor="e-money" {...textStyles}>
@@ -34,10 +35,7 @@ function PaymentDetails({ register }) {
             </label>
           </div>
 
-          <div
-            className="w-full cursor-pointer rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500  focus:outline-orange-500 focus:invalid:outline-red-500"
-            onClick={() => setCash(!cash)}
-          >
+          <div className="w-full cursor-pointer rounded-md border-2 border-gray-300 px-5 py-4 focus-within:border-orange-500  focus:outline-orange-500 focus:invalid:outline-red-500">
             <input
               type="radio"
               name="payment_type"
@@ -45,6 +43,7 @@ function PaymentDetails({ register }) {
               id="cash"
               required
               value={"cash-onDelivery"}
+              onClick={() => setCash(true)}
               {...register("payment_type", { required: true })}
             />
             <label htmlFor="cash" {...textStyles}>
