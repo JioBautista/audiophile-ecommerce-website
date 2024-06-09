@@ -6,15 +6,15 @@ function HomeYx1() {
   return (
     <div className="flex flex-col justify-between gap-5 md:flex-row">
       <img
-        src="src/assets/home/mobile/image-earphones-yx1.jpg"
+        src="/assets/home/mobile/image-earphones-yx1.jpg"
         className=" rounded-xl md:hidden"
       />
       <img
-        src="src/assets/home/tablet/image-earphones-yx1.jpg"
+        src="/assets/home/tablet/image-earphones-yx1.jpg"
         className="hidden max-w-[340px] rounded-xl md:block lg:hidden"
       />
       <img
-        src="src/assets/home/desktop/image-earphones-yx1.jpg"
+        src="/assets/home/desktop/image-earphones-yx1.jpg"
         className="hidden rounded-xl lg:block"
       />
 
