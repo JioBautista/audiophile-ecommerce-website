@@ -25,7 +25,7 @@ function MobileMenu() {
       <Container>
         <div className="flex flex-col items-center  justify-between gap-10  px-5 py-10 md:flex-row">
           <div {...cardStyles}>
-            <img src="/src/assets/headphones-mobile-img.png" {...imgStyles} />
+            <img src="/assets/headphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>HEADPHONES</h2>
             <div
               className="flex items-center justify-center gap-3"
@@ -37,12 +37,12 @@ function MobileMenu() {
               >
                 SHOP
               </Link>
-              <img src="/src/assets/shared/desktop/icon-arrow-right.svg" />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" />
             </div>
           </div>
 
           <div {...cardStyles}>
-            <img src="/src/assets/speakers-mobile-img.png" {...imgStyles} />
+            <img src="/assets/speakers-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>SPEAKERS</h2>
             <div
               className="flex items-center justify-center gap-3"
@@ -54,12 +54,12 @@ function MobileMenu() {
               >
                 SHOP
               </Link>
-              <img src="/src/assets/shared/desktop/icon-arrow-right.svg" />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" />
             </div>
           </div>
 
           <div {...cardStyles}>
-            <img src="/src/assets/earphones-mobile-img.png" {...imgStyles} />
+            <img src="/assets/earphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>EARPHONES</h2>
             <div
               className="flex items-center justify-center gap-3"
@@ -71,7 +71,7 @@ function MobileMenu() {
               >
                 SHOP
               </Link>
-              <img src="/src/assets/shared/desktop/icon-arrow-right.svg" />
+              <img src="/assets/shared/desktop/icon-arrow-right.svg" />
             </div>
           </div>
         </div>
