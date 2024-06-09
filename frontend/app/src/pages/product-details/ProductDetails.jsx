@@ -6,23 +6,11 @@ import ImageGallery from "./ImageGallery";
 import Suggestions from "./Suggestions";
 import Container from "../../components/Container";
 import Category from "../../navbar/Category";
-import { useQuery } from "@tanstack/react-query";
-import { fetchProductDetail } from "../../api/fetchProductDetail";
 import { useParams } from "react-router-dom";
+import { data } from "../../data/data";
 
 function ProductDetails() {
   const { productId } = useParams();
-  const { isPending, isError, data } = useQuery({
-    queryKey: ["productDetail", productId],
-    queryFn: fetchProductDetail,
-  });
-
-  if (isPending) {
-    return <h1>Loading ...</h1>;
-  }
-  if (isError) {
-    return <h1>Error occured...</h1>;
-  }
 
   const product =
     data && data.filter((items) => items.id === parseInt(productId));
