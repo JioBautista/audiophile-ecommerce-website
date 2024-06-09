@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 
 function ImageGallery({ data }) {
-  const srcs = ["./assets", "/src/assets"];
+  const srcs = ["./assets", "/assets"];
   const [current, replaced] = srcs;
   const imgClassesMobile = { className: "rounded-lg md:hidden" };
 

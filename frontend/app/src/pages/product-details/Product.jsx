@@ -41,15 +41,15 @@ function Product({ data }) {
         data.map((items) => (
           <React.Fragment key={items.id}>
             <img
-              src={items.image.mobile.replace("./assets", "/src/assets")}
+              src={items.image.mobile.replace("./assets", "/assets")}
               className="rounded-lg md:hidden"
             />
             <img
-              src={items.image.tablet.replace("./assets", "/src/assets")}
+              src={items.image.tablet.replace("./assets", "/assets")}
               className="hidden w-5/12 rounded-lg md:block lg:hidden"
             />
             <img
-              src={items.image.desktop.replace("./assets", "/src/assets")}
+              src={items.image.desktop.replace("./assets", "/assets")}
               className="hidden w-5/12 rounded-lg lg:block"
             />
             <div className="space-y-5 md:pl-12">

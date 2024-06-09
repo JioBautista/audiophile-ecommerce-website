@@ -15,15 +15,15 @@ function Suggestions({ data }) {
             <React.Fragment key={items.id}>
               <div className="space-y-5">
                 <img
-                  src={items.image.mobile.replace("./assets", "/src/assets")}
+                  src={items.image.mobile.replace("./assets", "/assets")}
                   className="rounded-lg md:hidden"
                 />
                 <img
-                  src={items.image.tablet.replace("./assets", "/src/assets")}
+                  src={items.image.tablet.replace("./assets", "/assets")}
                   className="hidden rounded-lg md:block lg:hidden"
                 />
                 <img
-                  src={items.image.desktop.replace("./assets", "/src/assets")}
+                  src={items.image.desktop.replace("./assets", "/assets")}
                   className="hidden rounded-lg lg:block"
                 />
                 <h1 className="text-xl font-semibold tracking-widest">

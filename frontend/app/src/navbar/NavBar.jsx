@@ -21,7 +21,7 @@ function NavBar() {
       <div className="relative bg-black">
         <Container styles={"p-5 flex items-center justify-between"}>
           <img
-            src="/src/assets/mobile-menu-icon-white.svg"
+            src="/assets/mobile-menu-icon-white.svg"
             className="w-8 cursor-pointer lg:hidden"
             onClick={() => toggleMobileMenu()}
           />
@@ -48,7 +48,7 @@ function NavBar() {
 
           <div className="relative">
             <img
-              src="/src/assets/cart-icon-white.png"
+              src="/assets/cart-icon-white.png"
               alt="cart-icon"
               className="w-8 cursor-pointer"
               onClick={() => toggleCart()}

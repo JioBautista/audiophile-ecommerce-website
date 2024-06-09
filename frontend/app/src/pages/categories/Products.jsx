@@ -20,21 +20,21 @@ function Products({ data }) {
                 <img
                   src={items.categoryImage.mobile.replace(
                     "./assets",
-                    "/src/assets",
+                    "/assets",
                   )}
                   className="rounded-lg md:hidden"
                 />
                 <img
                   src={items.categoryImage.tablet.replace(
                     "./assets",
-                    "/src/assets",
+                    "/assets",
                   )}
                   className="hidden rounded-lg md:block lg:hidden"
                 />
                 <img
                   src={items.categoryImage.desktop.replace(
                     "./assets",
-                    "/src/assets",
+                    "/assets",
                   )}
                   className="hidden rounded-lg lg:block"
                 />
