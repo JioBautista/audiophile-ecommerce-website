@@ -5,8 +5,17 @@ import CheckoutModal from "./CheckoutModal";
 import { useForm } from "react-hook-form";
 
 function Checkout() {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitSuccessful },
+  } = useForm();
+  const onSubmit = (data) => {
+    const cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
+    data.orders = cart;
+    console.log(cart);
+    sessionStorage.setItem("order", JSON.stringify(data));
+  };
   return (
     <>
       <div className="bg-gray-100 p-5">
@@ -18,7 +27,7 @@ function Checkout() {
           <Summary />
         </form>
       </div>
-      <CheckoutModal />
+      {isSubmitSuccessful && <CheckoutModal />}
     </>
   );
 }
