@@ -17,12 +17,12 @@ function ProductDetails() {
     queryFn: fetchProductDetail,
   });
 
-  if (isPending) {
-    return <h1>Loading ...</h1>;
-  }
-  if (isError) {
-    return <h1>Error occured...</h1>;
-  }
+  // if (isPending) {
+  //   return <h1>Loading ...</h1>;
+  // }
+  // if (isError) {
+  //   return <h1>Error occured...</h1>;
+  // }
 
   const product =
     data && data.filter((items) => items.id === parseInt(productId));
