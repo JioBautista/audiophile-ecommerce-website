@@ -4,19 +4,20 @@ import Category from "../../navbar/Category";
 import EndContent from "../../footer/EndContent";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../../api/fetchProducts";
+import { data } from "../../data/data";
 
 function Headphones() {
-  const { isPending, isError, data } = useQuery({
-    queryKey: ["headphones"],
-    queryFn: fetchProducts,
-  });
+  // const { isPending, isError, data } = useQuery({
+  //   queryKey: ["headphones"],
+  //   queryFn: fetchProducts,
+  // });
 
-  if (isPending) {
-    return <h1>Loading ...</h1>;
-  }
-  if (isError) {
-    return <h1>Error occured...</h1>;
-  }
+  // if (isPending) {
+  //   return <h1>Loading ...</h1>;
+  // }
+  // if (isError) {
+  //   return <h1>Error occured...</h1>;
+  // }
 
   const headphones =
     data && data.filter((obj) => obj.category === "headphones");
