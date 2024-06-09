@@ -13,7 +13,6 @@ function Checkout() {
   const onSubmit = (data) => {
     const cart = JSON.parse(sessionStorage.getItem("shoppingCart"));
     data.orders = cart;
-    console.log(cart);
     sessionStorage.setItem("order", JSON.stringify(data));
   };
   return (
