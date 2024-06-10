@@ -24,6 +24,7 @@ function AddCart() {
 
   function addItems(index) {
     shoppingCart[index].quantity += 1;
+    shoppingCart[index].price += shoppingCart[index].price;
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     toggleFlag();
   }
@@ -35,6 +36,7 @@ function AddCart() {
   }
 
   React.useEffect(() => {}, [flag]);
+  console.log(shoppingCart);
   return (
     <React.Fragment>
       <Container
