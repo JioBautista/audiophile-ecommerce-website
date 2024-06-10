@@ -82,14 +82,13 @@ function Product({ data }) {
                     <button>+</button>
                   </div>
                 </div>
-                {quantity ? (
-                  <button
-                    onClick={addToCart}
-                    className="bg-orange-500 px-10 py-2 text-white hover:bg-orange-300"
-                  >
-                    ADD TO CART
-                  </button>
-                ) : null}
+                <button
+                  onClick={addToCart}
+                  disabled={quantity === 0}
+                  className="bg-orange-500 px-10 py-2 text-white hover:bg-orange-300"
+                >
+                  ADD TO CART
+                </button>
               </div>
             </div>
           </React.Fragment>
