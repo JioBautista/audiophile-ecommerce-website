@@ -26,6 +26,7 @@ function Product({ data }) {
     shoppingCart.push(product);
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     toggleCart();
+    window.scrollTo(0, 0);
   }
 
   function incrementQuantity() {

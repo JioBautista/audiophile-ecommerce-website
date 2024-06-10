@@ -5,13 +5,17 @@ import { useStore } from "../../store/useStore";
 function Summary() {
   const { flag } = useStore((state) => ({ flag: state.flag }));
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));
-  const prices = shoppingCart && shoppingCart.map((obj) => obj.price);
-  const total =
-    prices &&
-    prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0);
+  const prices = shoppingCart ? shoppingCart.map((obj) => obj.price) : 0;
+  const total = prices
+    ? prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0)
+    : 0;
   const vat = total && total * 0.2;
 
   React.useEffect(() => {}, [flag]);
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <React.Fragment>
       <Container
@@ -60,15 +64,17 @@ function Summary() {
             ${total + 50}
           </p>
         </div>
-
-        <button
-          className={
-            "w-full bg-orange-500 px-8 py-3 tracking-widest text-white"
-          }
-          type="submit"
-        >
-          CONTINUE & PAY
-        </button>
+        {shoppingCart && (
+          <button
+            className={
+              "w-full bg-orange-500 px-8 py-3 tracking-widest text-white"
+            }
+            type="submit"
+            onClick={handleClick}
+          >
+            CONTINUE & PAY
+          </button>
+        )}
       </Container>
     </React.Fragment>
   );
