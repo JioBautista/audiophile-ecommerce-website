@@ -26,10 +26,6 @@ function ProductDetails() {
       }
       return acc;
     }, []);
-
-  console.log(data);
-  console.log(others);
-  console.log(suggestionIDs);
   return (
     <Container styles={`px-5 space-y-28 py-10`}>
       <Product data={product} />

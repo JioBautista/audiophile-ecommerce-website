@@ -29,14 +29,17 @@ function AddCart() {
     toggleFlag();
   }
 
-  function removeItems(index) {
-    shoppingCart[index].quantity -= 1;
+  function removeItems(index, num) {
+    shoppingCart[index].quantity = Math.max(
+      shoppingCart[index].quantity + num,
+      0,
+    );
     sessionStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     toggleFlag();
   }
 
   React.useEffect(() => {}, [flag]);
-  console.log(shoppingCart);
+  console.log(prices);
   return (
     <React.Fragment>
       <Container
@@ -71,7 +74,7 @@ function AddCart() {
                 <div className="flex items-center justify-center gap-1 bg-gray-200 py-2">
                   <div
                     className="cursor-pointer px-3 hover:text-orange-500"
-                    onClick={() => removeItems(index)}
+                    onClick={() => removeItems(index, -1)}
                   >
                     <button>-</button>
                   </div>

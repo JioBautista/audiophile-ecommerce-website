@@ -33,8 +33,8 @@ function Product({ data }) {
     setQuantity(quantity + 1);
   }
 
-  function decrementQuantity() {
-    setQuantity(quantity - 1);
+  function decrementQuantity(num) {
+    setQuantity((prevQty) => Math.max(prevQty + num, 0));
   }
   return (
     <div className="space-y-5 px-5 py-5 md:flex md:items-center">
@@ -70,7 +70,7 @@ function Product({ data }) {
                 <div className="flex justify-center gap-5 bg-gray-200">
                   <div
                     className="cursor-pointer px-4 py-2 hover:text-orange-500"
-                    onClick={decrementQuantity}
+                    onClick={() => decrementQuantity(-1)}
                   >
                     <button>-</button>
                   </div>
@@ -85,7 +85,7 @@ function Product({ data }) {
                 <button
                   onClick={addToCart}
                   disabled={quantity === 0}
-                  className="bg-orange-500 px-10 py-2 text-white hover:bg-orange-300"
+                  className="cursor-pointer bg-orange-500 px-10 py-2 text-white hover:bg-orange-300"
                 >
                   ADD TO CART
                 </button>
