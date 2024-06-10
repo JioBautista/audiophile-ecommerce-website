@@ -23,7 +23,7 @@ function Summary() {
             <React.Fragment key={index}>
               <div className="flex items-center gap-5">
                 <img
-                  src={items.img.replace("./assets", "/src/assets")}
+                  src={items.img.replace("./assets", "/assets")}
                   className="w-20 rounded-lg"
                 />
                 <div className="grow">
