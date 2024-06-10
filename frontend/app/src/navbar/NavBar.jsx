@@ -1,5 +1,4 @@
 import React from "react";
-import Category from "./Category";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
 import { useStore } from "../store/useStore";
@@ -53,11 +52,11 @@ function NavBar() {
               className="w-8 cursor-pointer"
               onClick={() => toggleCart()}
             />
-            {shoppingCart && (
-              <div className="absolute -top-3 left-5 w-[25px] rounded-full bg-orange-500 p-1 text-center text-white">
-                <p className="text-sm">{shoppingCart.length}</p>
-              </div>
-            )}
+            <div className="absolute -top-3 left-5 w-[25px] rounded-full bg-orange-500 p-1 text-center text-white">
+              <p className="text-sm">
+                {shoppingCart ? shoppingCart.length : 0}
+              </p>
+            </div>
           </div>
         </Container>
       </div>

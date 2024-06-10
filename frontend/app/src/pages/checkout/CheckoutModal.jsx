@@ -7,6 +7,10 @@ function CheckoutModal() {
   const total = prices
     ? prices.reduce((prevValue, currentValue) => prevValue + currentValue, 0)
     : null;
+
+  const returnHome = () => {
+    sessionStorage.clear();
+  };
   return (
     <>
       <div className="absolute left-5 right-5 top-28 z-10 mx-auto max-w-[540px] space-y-5 rounded-md bg-white p-5 lg:p-10">
@@ -45,7 +49,7 @@ function CheckoutModal() {
         <p className="text-gray-500">
           You will receive an email confirmation shortly.
         </p>
-        <Link className="block" to={"/"} onClick={() => sessionStorage.clear()}>
+        <Link className="block" to={"/"} onClick={returnHome} reloadDocument>
           <button className="w-full bg-orange-500 px-8 py-3 text-sm font-semibold tracking-widest text-white">
             BACK TO HOME
           </button>
