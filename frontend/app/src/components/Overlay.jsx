@@ -8,11 +8,9 @@ function Overlay({ mode }) {
   }));
   return (
     <div
-      className="absolute inset-0  bg-black/50"
+      className="absolute inset-0 top-16 bg-black/50"
       onClick={() => (mode ? toggleMobileMenu() : toggleCart())}
-    >
-      Overlay
-    </div>
+    ></div>
   );
 }
 

@@ -17,7 +17,7 @@ function Checkout() {
   };
   return (
     <>
-      <div className="bg-gray-100 p-5">
+      <div className="bg-gray-100 px-5 py-10">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="container mx-auto space-y-5 lg:flex lg:items-start lg:gap-5 lg:space-y-0 lg:p-10"

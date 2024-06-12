@@ -7,6 +7,7 @@ import Overlay from "./components/Overlay";
 import Footer from "./footer/Footer";
 import { Outlet } from "react-router-dom";
 import { useStore } from "./store/useStore";
+import "animate.css";
 
 function App() {
   const { cart, mobileMenu } = useStore((state) => ({
@@ -19,7 +20,7 @@ function App() {
         <NavBar />
         {mobileMenu && (
           <>
-            <div className="absolute inset-x-0 z-10 bg-white">
+            <div className="animate__animated animate__slideInLeft animate__faster absolute inset-x-0 z-10 bg-white">
               <Category />
             </div>
             <Overlay mode={mobileMenu} />

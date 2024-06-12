@@ -23,7 +23,7 @@ function MobileMenu() {
   return (
     <>
       <Container>
-        <div className="flex flex-col items-center  justify-between gap-10  px-5 py-10 md:flex-row">
+        <div className="flex flex-col  items-center justify-between  gap-10 px-5 py-10 md:flex-row">
           <div {...cardStyles}>
             <img src="/assets/headphones-mobile-img.png" {...imgStyles} />
             <h2 {...textStyles}>HEADPHONES</h2>
