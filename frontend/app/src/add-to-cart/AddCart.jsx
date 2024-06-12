@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../components/Container";
-import Button from "../components/Button";
 import Overlay from "../components/Overlay";
 import { Link } from "react-router-dom";
 import { useStore } from "../store/useStore";
