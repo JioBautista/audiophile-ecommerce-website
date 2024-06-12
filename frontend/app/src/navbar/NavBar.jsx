@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
 import { useStore } from "../store/useStore";
-import "animate.css";
+import "animate.css"
 
 function NavBar() {
   const { toggleCart, toggleMobileMenu } = useStore((state) => ({
@@ -22,7 +22,7 @@ function NavBar() {
         <Container styles={"p-5 flex items-center justify-between"}>
           <img
             src="/assets/mobile-menu-icon-white.svg"
-            className="animate__slideInLeft w-8 cursor-pointer lg:hidden"
+            className="w-8 cursor-pointer lg:hidden"
             onClick={() => toggleMobileMenu()}
           />
           <Link
