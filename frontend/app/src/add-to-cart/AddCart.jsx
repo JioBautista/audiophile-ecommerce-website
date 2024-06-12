@@ -73,18 +73,23 @@ function AddCart() {
                 </div>
 
                 <div className="flex items-center justify-center gap-1 bg-gray-200 py-2">
-                  <div
-                    className="cursor-pointer px-3 hover:text-orange-500"
-                    onClick={() => removeItems(index, -1)}
-                  >
-                    <button>-</button>
+                  <div>
+                    <button
+                      disabled={items.quantity === 0}
+                      className="cursor-pointer px-3 hover:text-orange-500"
+                      onClick={() => removeItems(index, -1)}
+                    >
+                      -
+                    </button>
                   </div>
                   <p className="p-2">{items.quantity}</p>
-                  <div
-                    className="cursor-pointer px-3 hover:text-orange-500"
-                    onClick={() => addItems(index)}
-                  >
-                    <button>+</button>
+                  <div>
+                    <button
+                      className="cursor-pointer px-3 hover:text-orange-500"
+                      onClick={() => addItems(index)}
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
