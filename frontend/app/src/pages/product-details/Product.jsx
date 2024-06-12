@@ -6,11 +6,13 @@ function Product({ data }) {
   const { toggleCart } = useStore((state) => ({
     toggleCart: state.toggleCart,
   }));
+  const price = data && data[0].price * quantity;
 
   const product = {
     id: data[0].id,
     name: data && data[0].name,
-    price: data && data[0].price,
+    initialPrice: data && data[0].price,
+    price: price,
     quantity: quantity,
     img: data && data[0].image.mobile,
   };
