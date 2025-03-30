@@ -1,12 +1,10 @@
 const express = require("express");
-const { PrismaClient } = require("./generated/prisma");
-
-const prisma = new PrismaClient();
 const app = express();
+const port = 3000;
+const indexRoute = require("./routes/index");
 
-app.get("/", async (request, response) => {
-  const test_data = await prisma.playing_with_neon.findMany();
-  response.json(test_data);
+app.use("/", indexRoute);
+
+app.listen(port, () => {
+  console.log(`Web-server listening on http://localhost:${port}`);
 });
-
-const server = app.listen(3000);
