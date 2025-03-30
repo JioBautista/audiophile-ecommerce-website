@@ -25,3 +25,5 @@ Thumbs.db
 # Dependency managers
 yarn-error.log
 package-lock.json # If you're using npm, keep this. If you use yarn, remove it.
+
+/generated/prisma
