@@ -33,7 +33,8 @@ function MobileMenu() {
             >
               <Link
                 className="tracking-widest text-gray-500 hover:text-orange-500"
-                to="/category/headphones"
+                to="/category/?category=headphones"
+                reloadDocument
               >
                 SHOP
               </Link>
@@ -50,7 +51,8 @@ function MobileMenu() {
             >
               <Link
                 className="tracking-widest text-gray-500 hover:text-orange-500"
-                to="/category/speakers"
+                to="/category/?category=speakers"
+                reloadDocument
               >
                 SHOP
               </Link>
@@ -67,7 +69,8 @@ function MobileMenu() {
             >
               <Link
                 className="tracking-widest text-gray-500 hover:text-orange-500"
-                to="/category/earphones"
+                to="/category/?category=earphones"
+                reloadDocument
               >
                 SHOP
               </Link>
