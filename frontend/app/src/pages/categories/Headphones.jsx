@@ -21,7 +21,7 @@ function Headphones() {
         console.error(error.message);
       }
     },
-    staleTime: 300000,
+    staleTime: 1000 * 60 * 5,
   });
   // URL Search Params
   const paramsString = window.location.search;
