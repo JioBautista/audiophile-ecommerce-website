@@ -35,13 +35,25 @@ function NavBar() {
             <Link {...linkStyles} to="/">
               HOME
             </Link>
-            <Link {...linkStyles} to="/category/headphones">
+            <Link
+              {...linkStyles}
+              to="/category/?category=headphones"
+              reloadDocument
+            >
               HEADPHONES
             </Link>
-            <Link {...linkStyles} to="/category/speakers">
+            <Link
+              {...linkStyles}
+              to="/category/?category=speakers"
+              reloadDocument
+            >
               SPEAKERS
             </Link>
-            <Link {...linkStyles} to="/category/earphones">
+            <Link
+              {...linkStyles}
+              to="/category/?category=earphones"
+              reloadDocument
+            >
               EARPHONES
             </Link>
           </div>
