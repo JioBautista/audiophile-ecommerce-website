@@ -6,15 +6,15 @@ function Product({ data }) {
   const { toggleCart } = useStore((state) => ({
     toggleCart: state.toggleCart,
   }));
-  const price = data && data[0].price * quantity;
+  const price = data && data.price * quantity;
 
   const product = {
-    id: data[0].id,
-    name: data && data[0].name,
-    initialPrice: data && data[0].price,
+    id: data.id,
+    name: data && data.name,
+    initialPrice: data && data.price,
     price: price,
     quantity: quantity,
-    img: data && data[0].image.mobile,
+    img: data && data.image.mobile,
   };
 
   const shoppingCart = JSON.parse(sessionStorage.getItem("shoppingCart"));

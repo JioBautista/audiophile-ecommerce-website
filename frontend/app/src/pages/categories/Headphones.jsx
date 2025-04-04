@@ -9,7 +9,10 @@ function Headphones() {
   const { data } = useQuery({
     queryKey: ["products"],
     queryFn: async () => {
-      const url = "https://audiophile-ecommerce-web-server.onrender.com/";
+      // For development URL
+      const url = "http://localhost:10000/";
+      // For production URL
+      // const url = "https://audiophile-ecommerce-web-server.onrender.com/";
       try {
         const response = await fetch(url);
         if (!response.ok) {
