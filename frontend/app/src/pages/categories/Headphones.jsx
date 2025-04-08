@@ -10,9 +10,9 @@ function Headphones() {
     queryKey: ["products"],
     queryFn: async () => {
       // For development URL
-      const url = "http://localhost:10000/";
+      // const url = "http://localhost:10000/";
       // For production URL
-      // const url = "https://audiophile-ecommerce-web-server.onrender.com/";
+      const url = "https://audiophile-ecommerce-web-server.onrender.com/";
       try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -32,8 +32,6 @@ function Headphones() {
   const category = searchParams.get("category");
   // Filters the data
   const products = data?.filter((obj) => obj.properties.category === category);
-
-  console.log(products);
   return (
     <>
       <div className="bg-black px-5 py-10 text-center text-3xl font-semibold uppercase tracking-widest text-white">
