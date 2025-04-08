@@ -18,13 +18,13 @@ function Footer() {
           <Link className="block" to={"/"}>
             <p className="tracking-widest hover:text-orange-500">HOME</p>
           </Link>
-          <Link className="block" to={"/category/headphones"}>
+          <Link className="block" to={"/category/?category=headphones"}>
             <p className="tracking-widest hover:text-orange-500">HEADPHONES</p>
           </Link>
-          <Link className="block" to={"/category/speakers"}>
+          <Link className="block" to={"/category/?category=speakers"}>
             <p className="tracking-widest hover:text-orange-500">SPEAKERS</p>
           </Link>
-          <Link className="block" to={"/category/earphones"}>
+          <Link className="block" to={"/category/?category=earphones"}>
             <p className="tracking-widest hover:text-orange-500">EARPHONES</p>
           </Link>
         </div>
