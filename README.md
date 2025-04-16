@@ -46,6 +46,6 @@ For server side my first choice was Python using Django framework but the though
 - Interacting with the database using the pg library
 - Learned making queries using SQL
 
-## Looking Forward
+## Cart Functionality
 
-I plan to learn more about how login/signup system works, understanding authorizations, dive deeper when it comes to caching, sending notifications to customers from the backend and many more.
+![Image](https://github.com/user-attachments/assets/1f054bdb-f217-4d3e-a242-ea84a60c7887)
